@@ -1,0 +1,41 @@
+# requirements.txt
+# SemEval-2022 Task 4 — Severity-Aware Soft-Label DeBERTa
+#
+# Python 3.9+ required.
+#
+# NOTE: Only transformers has an exact pinned version (recorded in the
+# notebook's pip install cell). All other packages were installed without
+# pinning. Run `pip freeze > freeze.txt` after installing to record exact
+# versions for full reproducibility.
+#
+# Install:
+#   pip install -r requirements.txt
+
+# Core model
+torch>=2.0.0
+transformers==4.40.0
+accelerate
+sentencepiece
+protobuf
+
+# Data / ML utilities
+scikit-learn>=1.3.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Sentiment analysis (used in error analysis)
+vaderSentiment
+
+# Visualisation
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# NLP utilities (used in error analysis / EDA)
+spacy>=3.5.0
+
+# Datasets (HuggingFace, used in baseline notebook)
+datasets
+
+# Jupyter (to run notebooks)
+jupyterlab
+ipywidgets
